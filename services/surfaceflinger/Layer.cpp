@@ -179,7 +179,7 @@ void Layer::onFirstRef() {
     mSurfaceFlingerConsumer->setName(mName);
 
     if (mFlinger->isLayerTripleBufferingDisabled()) {
-        mProducer->setMaxDequeuedBufferCount(2);
+        mProducer->setMaxDequeuedBufferCount(1);
     }
 
     const sp<const DisplayDevice> hw(mFlinger->getDefaultDisplayDevice());

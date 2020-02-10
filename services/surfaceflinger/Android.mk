@@ -60,6 +60,10 @@ else
         DisplayHardware/HWComposer_hwc1.cpp
 endif
 
+ifeq ($(BOARD_USES_MDP31),true)
+    LOCAL_CFLAGS += -DUSES_MDP31
+endif
+
 LOCAL_CFLAGS += -fvisibility=hidden -Werror=format
 
 LOCAL_STATIC_LIBRARIES := \
